@@ -1,0 +1,23 @@
+[
+  {
+    "date": {"month": -11, "day": 28}, "amount": "3100.00", "installments_count": 10,
+    "description": "Smart TV 55\"", "source": "Magazine Eletro",
+    "adjustments": [{"installment_number": 3, "amount": "-120.00", "description": "Estorno de garantia estendida não contratada"}]
+  },
+  {"date": {"month": -10, "day": 12}, "amount": "860.00", "installments_count": 3, "description": "Presentes para a família", "source": "Shopping"},
+  {
+    "date": {"month": -8, "day": 15}, "amount": "1450.00", "installments_count": 6,
+    "description": "Cadeira ergonômica", "source": "Móveis Office",
+    "adjustments": [{"installment_number": 2, "amount": "18.90", "description": "Juros por pagamento da fatura em atraso"}]
+  },
+  {"date": {"month": -7, "day": 9}, "currency": "USD", "amount": "89.00", "installments_count": 1, "description": "Curso online de arquitetura de software", "source": "Plataforma de cursos"},
+  {
+    "date": {"month": -6, "day": 8}, "amount": "5899.00", "installments_count": 10,
+    "description": "Notebook de trabalho", "source": "Loja TechMais",
+    "advance_next_installments": 2
+  },
+  {"date": {"month": -4, "day": 3}, "amount": "1980.00", "installments_count": 5, "description": "Passagens aéreas - férias", "source": "Companhia Aérea"},
+  {"date": {"month": -2, "day": 11}, "currency": "EUR", "amount": "520.00", "installments_count": 4, "description": "Hospedagem em Lisboa", "source": "Booking"},
+  {"date": {"month": -1, "day": 19}, "amount": "499.90", "installments_count": 2, "description": "Tênis de corrida", "source": "Loja Esportiva"},
+  {"date": {"month": 0, "day": 1}, "amount": "199.90", "installments_count": 1, "description": "Fone de ouvido", "source": "Loja TechMais"}
+]

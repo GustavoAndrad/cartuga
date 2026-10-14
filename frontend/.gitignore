@@ -1,0 +1,11 @@
+node_modules/
+dist/
+dist-ssr/
+# tsc -b build info and emitted config (see tsconfig.node.json)
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+*.local
+.env
+.env.*
+!.env.example

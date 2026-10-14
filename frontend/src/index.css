@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #f0f0ef;
+  --color-surface: #ffffff;
+  --color-text: #171717;
+  --color-text-muted: #666666;
+  --color-border: #d4d4d4;
+  --color-primary: #265c30;
+  --color-primary-hover: #1d4726;
+  --scrollbar-thumb: rgba(38, 92, 48, 0.3);
+  --scrollbar-thumb-hover: rgba(38, 92, 48, 0.55);
+}
+
+.dark {
+  --color-bg: #0a0a0a;
+  --color-surface: #171717;
+  --color-text: #fafafa;
+  --color-text-muted: #a3a3a3;
+  --color-border: #262626;
+  --color-primary: #4f9459;
+  --color-primary-hover: #78b380;
+  --scrollbar-thumb: rgba(79, 148, 89, 0.35);
+  --scrollbar-thumb-hover: rgba(79, 148, 89, 0.6);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Native number-input spinners can't be restyled to match the app, and look
+   inconsistent across browsers - hide them everywhere for a clean, uniform input. */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* The native date-picker indicator renders low-contrast (especially in dark
+   mode) and only opens the picker when clicked exactly on it. DateInput draws
+   its own icon and opens the picker on click anywhere in the field via
+   showPicker(), so the native glyph is kept (as a fallback) but hidden. */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Chat areas of the Assistente: a slimmer, arrow-less scrollbar than the app-wide one,
+   so long conversations don't get a heavy bar next to the text. */
+.chat-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.chat-scroll::-webkit-scrollbar-button {
+  display: none;
+}

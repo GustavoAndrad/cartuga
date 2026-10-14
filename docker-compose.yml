@@ -1,0 +1,87 @@
+services:
+  mysql:
+    image: mysql:8.0
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    # Published on this machine only (127.0.0.1): the demo credentials are public,
+    # so nothing here should be reachable from the local network.
+    ports:
+      - "127.0.0.1:3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./docker/mysql/init:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  backend:
+    build:
+      context: ./backend
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: mysql+pymysql://${MYSQL_USER}:${MYSQL_PASSWORD}@mysql:3306/${MYSQL_DATABASE}
+    depends_on:
+      mysql:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:8001:8000"
+    volumes:
+      - ./backend:/app
+      - backend_backups:/app/backups
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+
+  frontend:
+    build:
+      context: ./frontend
+    restart: unless-stopped
+    # Only the variable the frontend actually reads - never the whole .env (which
+    # holds JWT_SECRET and database passwords).
+    environment:
+      VITE_API_BASE_URL: ${VITE_API_BASE_URL}
+    depends_on:
+      - backend
+    ports:
+      - "127.0.0.1:5173:5173"
+    volumes:
+      - ./frontend:/app
+      - frontend_node_modules:/app/node_modules
+
+  # Optional local LLM for the Assistente (provider "ollama"). Only starts with
+  # `docker compose --profile ollama up -d`; then pull a model once, e.g.
+  # `docker compose exec ollama ollama pull qwen3:8b` (needs ~6 GB of memory free in
+  # Docker; qwen3:1.7b runs in ~2.5 GB). See docs/assistente.md.
+  ollama:
+    image: ollama/ollama:latest
+    profiles: ["ollama"]
+    restart: unless-stopped
+    environment:
+      # The system prompt + tool schemas alone are ~3k tokens - a smaller window
+      # silently truncates them.
+      OLLAMA_CONTEXT_LENGTH: 8192
+      # Keep the model loaded between questions (loading it is the slow part).
+      OLLAMA_KEEP_ALIVE: 30m
+    # Host access for debugging (curl http://localhost:11434/api/tags) - loopback only,
+    # never the network: Ollama has no authentication.
+    ports:
+      - "127.0.0.1:11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+
+volumes:
+  mysql_data:
+  backend_backups:
+  frontend_node_modules:
+  ollama_data:

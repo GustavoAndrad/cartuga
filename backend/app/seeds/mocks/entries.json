@@ -1,0 +1,19 @@
+[
+  {"type": "FIXED", "start_date": {"month": -12, "day": 5}, "end_date": {"month": -6, "day": "last"}, "amount": "6900.00", "description": "Salário", "source": "Nuvem Software"},
+  {"type": "FIXED", "start_date": {"month": -5, "day": 5}, "amount": "7800.00", "description": "Salário (após promoção)", "source": "Nuvem Software"},
+  {"type": "FIXED", "start_date": {"month": -12, "day": 15}, "end_date": {"month": -3, "day": "last"}, "amount": "250.00", "description": "Aluguel da vaga de garagem", "source": "Vizinho do 302"},
+  {"type": "FIXED", "start_date": {"month": -9, "day": 10}, "currency": "USD", "amount": "400.00", "description": "Suporte mensal de API", "source": "Cliente EUA (freelance)"},
+  {"type": "FIXED", "start_date": {"month": -7, "day": 20}, "currency": "EUR", "amount": "60.00", "description": "Royalties de curso online", "source": "Plataforma de cursos"},
+
+  {"date": {"month": -11, "day": 14}, "amount": "600.00", "description": "Palestra em meetup de Python", "source": "Comunidade PyData"},
+  {"date": {"month": -10, "day": 22}, "amount": "3450.00", "description": "Bônus semestral", "source": "Nuvem Software", "ref": "bonus"},
+  {"date": {"month": -9, "day": 8}, "amount": "742.30", "description": "Reembolso de viagem a trabalho", "source": "Nuvem Software"},
+  {"date": {"month": -8, "day": 21}, "amount": "1100.00", "description": "Venda da bicicleta", "source": "Marketplace"},
+  {"date": {"month": -6, "day": 20}, "amount": "3900.00", "description": "PLR anual", "source": "Nuvem Software", "ref": "plr"},
+  {"date": {"month": -5, "day": 12}, "amount": "87.45", "description": "Cashback do cartão", "source": "Banco Digital"},
+  {"date": {"month": -4, "day": 28}, "amount": "1120.80", "description": "Restituição do Imposto de Renda", "source": "Receita Federal"},
+  {"date": {"month": -3, "day": 17}, "amount": "2400.00", "description": "Site institucional (freelance)", "source": "Clínica Sorriso", "ref": "freela_site"},
+  {"date": {"month": -2, "day": 9}, "currency": "EUR", "amount": "350.00", "description": "Consultoria pontual", "source": "Startup de Lisboa"},
+  {"date": {"month": -1, "day": 25}, "amount": "180.00", "description": "Venda de livros usados", "source": "Sebo online"},
+  {"date": {"month": 0, "day": 2}, "amount": "64.90", "description": "Dividendos", "source": "Corretora"}
+]

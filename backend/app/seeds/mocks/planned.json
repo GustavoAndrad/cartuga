@@ -1,0 +1,45 @@
+[
+  {
+    "kind": "expense", "type": "FIXED", "payment_method": "CONTA", "is_planned": true,
+    "start_date": {"month": -12, "day": 18}, "amount": "170.00",
+    "description": "Conta de energia (estimativa)", "source": "Companhia Elétrica",
+    "reviews": [{"month": 0, "status": "CONFIRMED", "amount": "186.32"}]
+  },
+  {
+    "kind": "expense", "type": "FIXED", "payment_method": "CONTA", "is_planned": true,
+    "start_date": {"month": -12, "day": 20}, "amount": "85.00",
+    "description": "Conta de água (estimativa)", "source": "Companhia de Saneamento",
+    "reviews": [{"month": 0, "status": "CONFIRMED"}]
+  },
+  {
+    "kind": "expense", "type": "FIXED", "payment_method": "CONTA", "is_planned": true,
+    "start_date": {"month": 1, "day": 10}, "amount": "690.00",
+    "description": "Mensalidade da pós-graduação (a confirmar)", "source": "Universidade"
+  },
+  {
+    "kind": "entry", "type": "FIXED", "is_planned": true,
+    "start_date": {"month": 0, "day": 1}, "amount": "550.00",
+    "description": "Aulas particulares de programação", "source": "Alunos particulares",
+    "reviews": [{"month": 0, "status": "REJECTED"}, {"month": 1, "status": "CONFIRMED", "amount": "600.00"}]
+  },
+  {
+    "kind": "entry", "type": "EXCEPTIONAL", "is_planned": true,
+    "date": {"days": -2}, "amount": "1500.00",
+    "description": "Landing page (freelance)", "source": "Agência Pixel"
+  },
+  {
+    "kind": "entry", "type": "EXCEPTIONAL", "is_planned": true,
+    "date": {"month": 1, "day": 15}, "amount": "3200.00",
+    "description": "App mobile - fase 2 (freelance)", "source": "Agência Pixel"
+  },
+  {
+    "kind": "expense", "type": "EXCEPTIONAL", "payment_method": "CONTA", "is_planned": true,
+    "date": {"days": 1}, "amount": "780.00",
+    "description": "Revisão do carro", "source": "Oficina Mecânica"
+  },
+  {
+    "kind": "expense", "type": "EXCEPTIONAL", "payment_method": "CONTA", "is_planned": true,
+    "date": {"month": 2, "day": 18}, "amount": "1400.00",
+    "description": "Viagem de férias", "source": "Viagens"
+  }
+]

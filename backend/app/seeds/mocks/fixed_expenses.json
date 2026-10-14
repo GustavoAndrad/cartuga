@@ -1,0 +1,15 @@
+[
+  {"start_date": {"month": -12, "day": 10}, "end_date": {"month": -7, "day": "last"}, "amount": "2150.00", "description": "Aluguel", "source": "Imobiliária Central"},
+  {"start_date": {"month": -6, "day": 10}, "amount": "2290.00", "description": "Aluguel (reajuste anual)", "source": "Imobiliária Central"},
+  {"start_date": {"month": -12, "day": 10}, "amount": "460.00", "description": "Condomínio", "source": "Condomínio Jardim"},
+  {"start_date": {"month": -12, "day": 15}, "amount": "99.90", "description": "Internet fibra", "source": "Provedor NetMax"},
+  {"start_date": {"month": -12, "day": 15}, "amount": "59.90", "description": "Plano de celular", "source": "Operadora"},
+  {"start_date": {"month": -12, "day": 5}, "amount": "389.00", "description": "Plano de saúde", "source": "Saúde Mais"},
+  {"start_date": {"month": -12, "day": 12}, "amount": "44.90", "description": "Streaming de vídeo e música", "source": "Assinaturas"},
+  {"start_date": {"month": -12, "day": 20}, "end_date": {"month": -4, "day": "last"}, "amount": "168.40", "description": "Seguro do carro (apólice anterior)", "source": "Seguradora Rota"},
+  {"start_date": {"month": -3, "day": 20}, "amount": "142.70", "description": "Seguro do carro", "source": "Seguradora Via"},
+  {"start_date": {"month": -10, "day": 3}, "currency": "USD", "amount": "20.00", "description": "Assinatura de ferramenta de IA", "source": "Software"},
+  {"start_date": {"month": -9, "day": 5}, "amount": "119.90", "description": "Academia", "source": "Academia Fit"},
+  {"start_date": {"month": -8, "day": 8}, "end_date": {"month": 2, "day": "last"}, "amount": "320.00", "description": "Curso de inglês", "source": "Escola Speak"},
+  {"start_date": {"month": -6, "day": 1}, "amount": "50.00", "description": "Doação mensal", "source": "ONG Patas Amigas"}
+]

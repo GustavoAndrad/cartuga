@@ -1,0 +1,11 @@
+[
+  {"descriptions": ["Compras do mês", "Reposição da despensa"], "source": "Supermercado", "min": "320.00", "max": "590.00", "per_month": 2},
+  {"descriptions": ["Hortifruti da semana", "Frutas e verduras"], "source": "Sacolão", "min": "45.00", "max": "120.00", "per_month": 2},
+  {"descriptions": ["Padaria", "Café da manhã fora"], "source": "Padaria Pão Quente", "min": "18.00", "max": "45.00", "per_month": 2},
+  {"descriptions": ["Jantar fora", "Almoço de domingo", "Happy hour"], "source": "Restaurantes", "min": "80.00", "max": "210.00", "per_month": 1},
+  {"descriptions": ["Pedido de delivery", "Pizza", "Comida japonesa"], "source": "Aplicativo de delivery", "min": "45.00", "max": "110.00", "per_month": 2},
+  {"descriptions": ["Combustível"], "source": "Posto de combustível", "min": "160.00", "max": "240.00", "per_month": 1},
+  {"descriptions": ["Corridas de aplicativo", "Estacionamento"], "source": "Transporte", "min": "25.00", "max": "95.00", "per_month": 1},
+  {"descriptions": ["Farmácia", "Remédios"], "source": "Drogaria", "min": "25.00", "max": "140.00", "per_month": 1},
+  {"descriptions": ["Ração e petiscos", "Banho e tosa"], "source": "Pet shop", "min": "60.00", "max": "150.00", "per_month": 1}
+]

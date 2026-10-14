@@ -1,0 +1,9 @@
+[
+  {"type": "DEPOSIT_FRESH", "date": {"month": -12, "day": 3}, "amount": "4000.00", "description": "Reserva de emergência (saldo anterior)"},
+  {"type": "DEPOSIT_CARVE", "date": {"month": -10, "day": 23}, "source_ref": "bonus", "carve_mode": "PERCENTAGE", "carve_value": "50", "description": "Metade do bônus"},
+  {"type": "DEPOSIT_FRESH", "date": {"month": -8, "day": 2}, "amount": "1000.00", "description": "Presente em dinheiro dos avós"},
+  {"type": "DEPOSIT_CARVE", "date": {"month": -6, "day": 21}, "source_ref": "plr", "carve_mode": "PERCENTAGE", "carve_value": "25", "description": "25% da PLR"},
+  {"type": "WITHDRAWAL", "date": {"month": -5, "day": 14}, "amount": "900.00", "description": "Conserto do celular"},
+  {"type": "DEPOSIT_CARVE", "date": {"month": -3, "day": 18}, "source_ref": "freela_site", "carve_mode": "FIXED", "carve_value": "600.00", "description": "Parte do freelance"},
+  {"type": "WITHDRAWAL", "date": {"month": -1, "day": 10}, "amount": "1200.00", "description": "Ajuda nos custos da viagem"}
+]

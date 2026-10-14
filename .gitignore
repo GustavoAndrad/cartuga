@@ -1,0 +1,12 @@
+# Repo-wide ignores; language-specific ones live in backend/ and frontend/.
+
+.env
+.env.*
+!.env.example
+backups/
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.sqlite3
